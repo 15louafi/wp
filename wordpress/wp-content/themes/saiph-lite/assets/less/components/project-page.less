@@ -1,0 +1,107 @@
+//main: ../theme.less
+/* Project Page
+------------------------------------------------------------------------------*/
+.tpl-project-title {
+	font-size     : 16px;
+	font-weight   : 400;
+	margin-bottom : 30px;
+}
+
+.tpl-project-subtitle {
+	font-weight : 600;
+	font-size   : 13px;
+	margin-top  : 30px;
+	&:first-of-type {
+		margin-top : 30px;
+	}
+}
+
+.tpl-project-media {
+	img {
+		width  : 100%;
+		height : 100%;
+	}
+}
+
+.tpl-project-controls {
+	height      : 200px;
+	line-height : 200px;
+	font-family : @font-family-titles;
+	font-size   : 32px;
+	font-weight : 700;
+	color       : rgba(0, 0, 0, 0);
+	overflow    : hidden;
+	a {
+		color          : #fff;
+		font-size      : 25px;
+		text-transform : uppercase;
+		overflow       : hidden;
+		font-weight    : 700;
+		text-shadow    : 1px 1px 1px @brand-primary;
+		@media (max-width : @screen-md) {
+			font-size   : 18px;
+			line-height : 15px;
+			height      : 200px;
+			display     : inline;
+		}
+	}
+	.tpl-project-previous {
+		a {
+			color       : #FFF;
+			text-shadow : 1px 1px 1px @brand-secondary;
+		}
+		width               : 50%;
+		height              : 100%;
+		float               : left;
+		position            : relative;
+		text-align          : right;
+		.transition(0.2s);
+		padding-right       : 70px;
+		background-repeat   : no-repeat;
+		background-position : center center;
+		background-size     : cover;
+		z-index             : 0;
+		&:before {
+			background-color : fade(@brand-primary, 85%);
+			content          : '';
+			position         : absolute;
+			top              : 0;
+			right            : 0;
+			bottom           : 0;
+			left             : 0;
+			z-index          : -1;
+		}
+		&:hover {
+			background-color : darken(@brand-primary, 30%);
+			.transition-duration(0.2s);
+			padding-right    : 75px;
+		}
+	}
+	.tpl-project-next {
+		height              : 100%;
+		float               : left;
+		width               : 50%;
+		position            : relative;
+		padding-left        : 70px;
+		.transition(0.2s);
+		background-repeat   : no-repeat;
+		background-position : center center;
+		background-size     : cover;
+		z-index             : 0;
+		&:before {
+			background-color : fade(@brand-secondary, 85%);
+			content          : '';
+			position         : absolute;
+			top              : 0;
+			right            : 0;
+			bottom           : 0;
+			left             : 0;
+			z-index          : -1;
+		}
+		&:hover {
+			background-color : darken(@brand-secondary, 30%);
+			.transition-duration(0.2s);
+			padding-left     : 75px;
+		}
+	}
+}

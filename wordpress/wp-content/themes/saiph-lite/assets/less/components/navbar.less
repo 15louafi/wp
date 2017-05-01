@@ -1,0 +1,623 @@
+//main: ../theme.less
+/* Main Menu
+------------------------------------------------------------------------------*/
+.brand {
+	img {
+		width : 80px;
+	}
+}
+
+.tpl-menu {
+	border        : none;
+	margin        : 0;
+	padding       : 15px 0;
+	border-radius : 0;
+	font-family   : @font-family-titles;
+	z-index       : 100;
+	top           : 1px;
+	.transition(.2s, ease);
+	// Brand / Logo
+	.navbar-brand {
+		text-transform : uppercase;
+		font-weight    : 600;
+		font-size      : 22px;
+		padding        : 20px 15px;
+		text-overflow  : ellipsis;
+		max-width      : 250px;
+		overflow       : hidden;
+		white-space    : nowrap;
+		@media (min-width : 768px) {
+			&.logo-center {
+				display    : block;
+				text-align : center;
+				margin     : 0 auto;
+				width      : 100%;
+				max-width  : 100%;
+				.tpl-logo {
+					margin : 0 auto;
+				}
+			}
+		}
+		.tpl-logo {
+			width : 100px;
+		}
+	}
+
+	// General styles for the list items
+	.navbar-nav {
+		> li {
+			a {
+				text-decoration : none;
+				font-size       : 13px;
+				font-weight     : 600;
+				z-index         : 20px;
+				padding         : 20px 17px;
+				color           : @text-color;
+				.transition(.2s, ease);
+				&:hover,
+				&:active,
+				&:focus {
+					color            : @brand-secondary;
+					background-color : transparent;
+					background-image : none;
+					.transition(.1s, ease);
+				}
+				.fa {
+					margin-right : 10px;
+				}
+			}
+			i {
+				padding : 20px 5px;
+			}
+			&.current-menu-item {
+				a {
+					color : @brand-secondary;
+				}
+			}
+
+			// Add styles for the dropdown menu icon
+			&.dropdown,
+			&.menu-item-has-children {
+				> a {
+					&:first-of-type {
+						&:after {
+							font-family    : "FontAwesome";
+							content        : '\f078';
+							font-size      : 6px;
+							margin-left    : 5px;
+							position       : relative;
+							vertical-align : middle;
+							@media only screen and (max-width : 767px) {
+								display : none;
+							}
+						}
+					}
+				}
+			}
+
+			// If it's the last item, the anchor does not need padding right
+			&:last-of-type {
+				a {
+					padding-right : 0;
+				}
+			}
+			&.active {
+				> a {
+					color            : @brand-secondary;
+					background-color : transparent;
+					border           : none;
+				}
+			}
+			> .sub-menu {
+				list-style : none;
+				margin     : 0;
+				padding    : 0;
+				display    : none;
+				li {
+					a {
+						margin-left : 10px;
+						display     : block;
+					}
+				}
+				@media (min-width : 768px) {
+					position       : absolute;
+					min-width      : 170px;
+					.gradient(@body-bg);
+					padding-top    : 0;
+					padding-bottom : 0;
+					min-width      : 170px;
+					left           : 0;
+					border-radius  : @border-radius;
+					.box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+					.transition(0.2s);
+					li {
+						a {
+							margin-left : 0;
+						}
+					}
+				}
+			}
+			@media (min-width : 768px) {
+				&:hover {
+					> .sub-menu {
+						display : block;
+					}
+				}
+			}
+			&.menu-item-has-mega-menu {
+				position : relative;
+				> .mega-menu {
+					position : relative;
+					display  : none;
+					.sub-menu {
+						list-style : none;
+						margin     : 0;
+						padding    : 0;
+						display    : none;
+						li {
+							a {
+								margin-left : 10px;
+								display     : block;
+							}
+						}
+					}
+					> .sub-menu {
+						display : block;
+					}
+					.mega-menu-col {
+						> div {
+							display : none;
+						}
+					}
+				}
+				@media (min-width : 768px) {
+					position : static;
+					&:hover {
+						> .mega-menu {
+							display : block;
+						}
+					}
+
+					> .mega-menu {
+						position      : absolute;
+						border-radius : @border-radius;
+						top           : 100%;
+						left          : 0;
+						right         : 0;
+						float         : left;
+						min-width     : 260px;
+						padding       : 20px;
+						.box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+						.gradient(@body-bg);
+						.sub-menu {
+							min-width    : 220px;
+							margin-right : 20px;
+							li {
+								a {
+									margin-left : 0;
+									padding     : 5px;
+								}
+							}
+						}
+						.mega-menu-col {
+							> div {
+								display   : block;
+								max-width : 300px;
+							}
+						}
+					}
+				}
+				@media (min-width : 992px) {
+
+				}
+
+				// Container Widhts
+				> .mega-menu {
+					@media (min-width : 767px) {
+						width : 750px;
+					}
+					@media (min-width : 992px) {
+						width : 970px;
+					}
+					@media (min-width : 1200px) {
+						width : 1170px;
+						ul {
+							&.mega-menu-row {
+								float : left;
+							}
+						}
+					}
+					@media (min-width : 1400px) {
+						width : 1400px;
+					}
+				}
+			}
+		}
+		@media (min-width : 768px) {
+			&.navbar-center {
+				display    : block;
+				width      : 100%;
+				float      : none;
+				text-align : center;
+				> li {
+					float   : none;
+					display : inline-block;
+					.sub-menu,
+					.mega-menu {
+						text-align : initial;
+					}
+					&:last-of-type {
+						a {
+							padding-right : 17px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Icon for submenu
+	.tpl-menu-toggle {
+		float         : right;
+		margin-bottom : 8px;
+		margin-right  : 15px;
+		.tcon-menu__lines {
+			height : 3px;
+			&:before, &:after {
+				height : 3px;
+			}
+		}
+		@media (min-width : 768px) {
+			display : none;
+		}
+	}
+
+	// Menu styles
+	&.primary {
+		background-color : @brand-primary;
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color : #FFF;
+		}
+		.navbar-brand {
+			color : #fff;
+			&:hover {
+				color : @brand-secondary;
+			}
+		}
+		.tpl-menu-toggle {
+			.tcon-menu__lines {
+				background-color : #fff;
+				&:before,
+				&:after {
+					background-color : #fff;
+				}
+			}
+			&.tcon-transform {
+				.tcon-menu__lines {
+					background-color : transparent;
+				}
+			}
+		}
+		.navbar-nav {
+			> li {
+				a {
+					color : #fff;
+					&:hover,
+					&:focus,
+					&:active {
+						background-color : transparent;
+						color            : darken(@brand-primary, 10%);
+					}
+				}
+				i {
+					color : #fff;
+				}
+				&.active {
+					> a {
+						color : @brand-secondary;
+						&:hover {
+							color : darken(@brand-primary, 15%);
+						}
+					}
+				}
+				> .sub-menu,
+				> .mega-menu {
+					.gradient(@brand-primary);
+				}
+				&.current-menu-item {
+					a {
+						color : @brand-secondary;
+					}
+				}
+			}
+		}
+	}
+	&.secondary {
+		background-color : @brand-secondary;
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color : #fff;
+		}
+		.navbar-brand {
+			color : #fff;
+			&:hover {
+				color : @brand-primary;
+			}
+		}
+		.tpl-menu-toggle {
+			.tcon-menu__lines {
+				background-color : #fff;
+				&:before,
+				&:after {
+					background-color : #fff;
+				}
+			}
+			&.tcon-transform {
+				.tcon-menu__lines {
+					background-color : transparent;
+				}
+			}
+		}
+		.navbar-nav {
+			> li {
+				a {
+					color : #fff;
+					&:hover,
+					&:focus,
+					&:active {
+						background-color : transparent;
+						color            : lighten(@brand-primary, 20%);
+					}
+				}
+				i {
+					color : #fff;
+				}
+				&.active {
+					> a {
+						color : @brand-primary;
+						&:hover {
+							color : lighten(@brand-primary, 10%);
+						}
+					}
+				}
+				> .sub-menu,
+				> .mega-menu {
+					.gradient(@brand-secondary);
+				}
+				&.current-menu-item {
+					a {
+						color : @brand-primary;
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (max-width : 767px) {
+		padding : 0;
+	}
+}
+
+// Absolute menu
+&.menu-absolute {
+	width    : 100%;
+	position : absolute;
+	&.primary,
+	&.secondary {
+		background-color : transparent;
+	}
+}
+
+.is_stuck {
+	background    : fade(@body-bg, 90%);
+	border-bottom : 1px solid fade(@brand-primary, 20%);
+	&.primary {
+		.gradient(@brand-primary);
+	}
+	&.secondary {
+		.gradient(@brand-secondary);
+	}
+	.navbar-brand.logo-center {
+		display  : initial;
+		position : absolute;
+		width    : auto;
+		margin   : initial;
+		.transition(.2s);
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+	.tpl-menu {
+		top : 0;
+		.tpl-menu-toggle {
+			margin-top : 10px;
+			&:hover,
+			&:focus,
+			&:active {
+
+			}
+		}
+		.navbar-collapse {
+			.gradient(@body-bg);
+			border-color : lighten(@brand-primary, 10%);
+		}
+		&.primary {
+			.navbar-collapse {
+				.gradient(@brand-primary);
+			}
+			.open .dropdown-menu > li > a {
+				color : #fff;
+			}
+		}
+		&.secondary {
+			.navbar-collapse {
+				.gradient(@brand-secondary);
+			}
+		}
+		.navbar-nav > li a {
+			padding : 10px 17px;
+		}
+	}
+}
+
+.tpl-menu {
+	.submenu-button {
+		position : absolute;
+		z-index  : 10;
+		right    : 13px;
+		top      : 0;
+		height   : 38px;
+		width    : 38px;
+		cursor   : pointer;
+		@media (min-width : 768px) {
+			display : none;
+		}
+		.tcon-menu__lines {
+			width            : 25px;
+			height           : 3.5px;
+			background-color : @text-color;
+			&:after,
+			&:before {
+				height           : 3.5px;
+				background-color : @text-color;
+			}
+		}
+		&:hover {
+			.tcon-menu__lines {
+				background-color : @brand-secondary;
+				&:after,
+				&:before {
+					background-color : @brand-secondary;
+				}
+			}
+		}
+		&.opened {
+			&:after {
+				.transition(.2s, ease);
+				.rotation(90deg);
+			}
+		}
+	}
+	&.primary,
+	&.secondary {
+		.submenu-button {
+			.tcon-menu__lines {
+				width            : 25px;
+				height           : 3.5px;
+				background-color : #fff;
+				&:after,
+				&:before {
+					height           : 3.5px;
+					background-color : #fff;
+				}
+			}
+			&:hover {
+				.tcon-menu__lines {
+					background-color : lighten(@brand-primary, 20%);
+					&:after,
+					&:before {
+						background-color : lighten(@brand-primary, 20%);
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav,
+.collapse,
+.dropup,
+.dropdown {
+	position : static;
+}
+
+/* Footer Menu
+------------------------------------------------------------------------------*/
+.tpl-footer-menu {
+	width         : 100%;
+	text-align    : center;
+	display       : inline-block;
+	border-bottom : 1px solid @border-color;
+	> li {
+		display : inline-block;
+		float   : initial;
+		> a {
+			font-weight    : 600;
+			padding-top    : 30px;
+			padding-bottom : 30px;
+			&:hover {
+				background-color : transparent;
+			}
+		}
+	}
+}
+
+/* Author Menu
+------------------------------------------------------------------------------*/
+.author-menu {
+	.navbar-collapse.collapse {
+		width : 80%;
+		float : left;
+		ul {
+			> li {
+				&:first-of-type {
+					> a {
+						padding-left : 0;
+					}
+				}
+			}
+		}
+	}
+	.author-area {
+		width : 20%;
+		float : left;
+		a {
+			text-decoration : none;
+			font-size       : 13px;
+			font-weight     : 600;
+			z-index         : 20px;
+			padding         : 20px 10px;
+			color           : @text-color;
+		}
+		.author-avatar {
+			img {
+				border-radius : 50%;
+			}
+		}
+		.author-name {
+			overflow : hidden;
+		}
+	}
+	&.primary {
+		a {
+			color : #fff;
+			&:hover,
+			&:focus,
+			&:active {
+				background-color : transparent;
+				color            : lighten(@brand-secondary, 20%);
+			}
+		}
+	}
+	&.secondary {
+		a {
+			color : #fff;
+			&:hover,
+			&:focus,
+			&:active {
+				background-color : transparent;
+				color            : lighten(@brand-primary, 20%);
+			}
+		}
+	}
+}

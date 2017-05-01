@@ -1,0 +1,72 @@
+//main: ../theme.less
+
+/* Go top button
+------------------------------------------------------------------------------*/
+
+.tpl-go-top {
+	display            : inline-block;
+	height             : 40px;
+	width              : 40px;
+	position           : fixed;
+	bottom             : 40px;
+	right              : 10px;
+	color              : @brand-secondary;
+	border             : 1px solid @brand-secondary;
+	border-radius      : @border-radius;
+	font-size          : 40px;
+	text-align         : center;
+	white-space        : nowrap;
+	visibility         : hidden;
+	opacity            : 0;
+	-webkit-transition : opacity .3s 0s, visibility 0s .3s;
+	transition         : opacity .3s 0s, visibility 0s .3s;
+	line-height        : 50px;
+	z-index            : 100;
+}
+
+.tpl-go-top.tpl-go-top-is-visible, .tpl-go-top.tpl-go-top-fade-out, .no-touch .tpl-go-top:hover {
+	-webkit-transition : opacity .3s 0s, visibility 0s 0s;
+	transition         : opacity .3s 0s, visibility 0s 0s;
+}
+
+.tpl-go-top.tpl-go-top-is-visible {
+	/* the button becomes visible */
+	visibility : visible;
+	opacity    : 1;
+
+}
+
+.tpl-go-top.tpl-go-top-fade-out {
+	/* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+	opacity : .5;
+}
+
+.no-touch .tpl-go-top:hover {
+	border        : 1px solid @brand-secondary;
+	border-radius : @border-radius;
+	opacity       : 1;
+	color         : @brand-secondary;
+}
+
+@media only screen and (max-width : 768px) {
+	.tpl-go-top {
+		line-height : 0px;
+		font-size   : 33px;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	.tpl-go-top {
+		right  : 20px;
+		bottom : 20px;
+	}
+}
+
+@media only screen and (min-width : 1024px) {
+	.tpl-go-top {
+		height : 60px;
+		width  : 60px;
+		right  : 30px;
+		bottom : 30px;
+	}
+}

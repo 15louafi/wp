@@ -1,0 +1,90 @@
+//main: ../theme.less
+/* Buttons
+------------------------------------------------------------------------------*/
+.tpl-button-inverse {
+	color            : @text-color;
+	background-color : transparent;
+	border           : 2px solid @text-color;
+	padding          : 12px 38px;
+}
+
+.tpl-input-button {
+	width                      : 46px;
+	padding                    : 0;
+	border                     : 0;
+	height                     : 46px;
+	border-top-left-radius     : 0;
+	border-bottom-left-radius  : 0;
+	border-top-right-radius    : @border-radius;
+	border-bottom-right-radius : @border-radius;
+	.transition-duration(0.2s);
+	background-color           : @brand-secondary;
+	color                      : #fff;
+	&:hover {
+		background-color : lighten(@brand-secondary, 10%);
+		.transition-duration(0.2s);
+	}
+}
+
+.tpl-input-button > .fa {
+	line-height : 38px;
+}
+
+.tpl-button-small {
+	padding   : 5px;
+	width     : auto;
+	font-size : 12px;
+	&.tpl-button-inverse {
+		padding : 4px;
+	}
+}
+
+a.tag {
+	color          : @text-color;
+	border         : 1px solid @border-color;
+	padding        : 10px 15px;
+	display        : inline-block;
+	text-transform : uppercase;
+	font-family    : @font-family-titles;
+	font-size      : 10px;
+	font-weight    : 600;
+}
+
+.btn {
+	background-color : transparent;
+	border           : 2px solid fade(@text-color, 90%);
+	color            : @text-color;
+	.transition-duration(.2s);
+	font-family      : @font-family-titles;
+	font-weight      : 400;
+	font-size        : 16px;
+	border-radius    : @border-radius;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.focus,
+.btn:active,
+.btn.active,
+.open > .dropdown-toggle.btn-default {
+	.transition-duration(.2s);
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn.active.focus {
+	outline : none;
+}
+
+.tpl-button {
+	.transition(.2s, ease);
+	text-transform : uppercase;
+	font-weight    : 700;
+	.btnic-rounder ();
+	.btnic();
+	.btnic-sizer();
+	.btnic-colours();
+}

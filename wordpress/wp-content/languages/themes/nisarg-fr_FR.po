@@ -1,0 +1,313 @@
+# Translation of Nisarg in French (France)
+# This file is distributed under the same license as the Nisarg package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-04-17 08:03:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
+"Project-Id-Version: Nisarg\n"
+
+#. Theme Name of the plugin/theme
+msgid "Nisarg"
+msgstr "Nisarg"
+
+#. Description of the plugin/theme
+msgid "Nisarg is a new fully responsive and translation ready theme that allows you to create stunning blogs and websites. Theme is well suited for travel, photography, recipe, design, art, personal and any other creative websites and blogs. The theme is developed using Bootstrap 3 that makes it mobile and tablets friendly.  It has various options in WordPress Customizer to change look of the theme. Theme customizer can be used to add your own header image of flexible height, background image, to set background color, header text color and accent color(Supports seven different accent colors).  Theme supports eight post formats, such as: Video, Image, Aside, Status, Audio, Quote, Link and Gallery."
+msgstr "Nisarg est un nouveau thème entièrement reponsive et prêt pour la traduction qui vous permet de créer des sites étonnants. Le thème est bien adapté pour des sites de voyage, photographie, recette, design, art, personnel et bien d'autres. Il est développé avec Bootstrap 3 ce qui le rend agréable sur tablette et mobile. Il possède des options variées dans l'outil de personnalisation de WordPress pour changer son apparence. L'outil de personnalisation peut être utilisé pour ajouter votre image d'en-tête de hauteur flexible, définir une couleur de fond et une couleur d'accentuation (7 couleurs différentes). Le thème gère 8 formats d'articles tels que&nbsp;: Image, Annonce, Audio, Citation, Lien et Galerie."
+
+#: template-parts/content.php:14
+msgid "Featured"
+msgstr "Recommandé"
+
+#: template-parts/content-none.php:29
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Il semble que rien ne soit trouvé pour votre recherche."
+
+#: template-parts/content-none.php:24
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Désolé, mais rien ne correspond à vos critères."
+
+#: template-parts/content-none.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Prêt à publier votre 1er article ? <a href=\"%1$s\">Lancez vous ici</a>."
+
+#: template-parts/content-none.php:13 template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Aucun résultat"
+
+#: sidebar.php:24
+msgid "Meta"
+msgstr "Meta"
+
+#: sidebar.php:17
+msgid "Archives"
+msgstr "Archives"
+
+#: searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr "Recherche"
+
+#: searchform.php:12
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Recherche&hellip;"
+
+#: searchform.php:11 searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr "Recherche :"
+
+#: inc/template-tags.php:170
+msgid " %1$s"
+msgstr " %1$s"
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Résultats de recherche pour: %s"
+
+#: inc/template-tags.php:177
+msgid "Edit This Post"
+msgstr "Modifier cet article"
+
+#: inc/template-tags.php:161
+msgid "%1$s"
+msgstr "%1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:157 inc/template-tags.php:168
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:139
+msgid "% comments"
+msgstr "% commentaires"
+
+#: inc/template-tags.php:139
+msgid "0 Comment"
+msgstr "0 Commentaire"
+
+#: inc/template-tags.php:139
+msgid "1 comment"
+msgstr "1 commentaire"
+
+#: inc/template-tags.php:138
+msgctxt "Used before post author name."
+msgid "Comments"
+msgstr "Commentaires"
+
+#: inc/template-tags.php:121
+msgid "View all posts by"
+msgstr "Voir tous les articles de "
+
+#: inc/template-tags.php:99
+msgid "Previous Post"
+msgstr "Article précédent"
+
+#: inc/template-tags.php:98
+msgid "PREVIOUS "
+msgstr "PRÉCÉDENT"
+
+#: inc/template-tags.php:82
+msgid "Next Post"
+msgstr "Article suivant"
+
+#: inc/template-tags.php:82
+msgid " NEXT"
+msgstr "SUIVANT"
+
+#: inc/template-tags.php:71
+msgid "Post navigation"
+msgstr "Navigation d'article"
+
+#: inc/template-tags.php:31
+msgid "NEWER POSTS"
+msgstr "ARTICLES PLUS RÉCENTS"
+
+#: inc/template-tags.php:41
+msgid "OLDER POST"
+msgstr "ARTICLES PLUS ANCIENS"
+
+#: inc/template-tags.php:24
+msgid "Posts navigation"
+msgstr "Navigation au sein des articles"
+
+#: inc/customizer.php:124
+msgid "Blue"
+msgstr "Bleu"
+
+#: inc/customizer.php:118
+msgid "yellow"
+msgstr "Jaune"
+
+#: inc/customizer.php:112
+msgid "Red"
+msgstr "Rouge"
+
+#: inc/customizer.php:106
+msgid "Green"
+msgstr "Vert"
+
+#: inc/customizer.php:100
+msgid "Orange"
+msgstr "Orange"
+
+#: inc/customizer.php:94
+msgid "Pink"
+msgstr "Rose"
+
+#: inc/customizer.php:70
+msgid "Accent Color"
+msgstr "Couleur du Contraste"
+
+#: inc/customizer.php:88
+msgid "Default"
+msgstr "Pa défaut"
+
+#: inc/customizer.php:55
+msgid "Accent Color Name"
+msgstr "Nom de la couleur d'accentuation"
+
+#: inc/customizer.php:71
+msgid "Applied to highlight elements."
+msgstr "Appliqué aux éléments accentués"
+
+#: inc/customizer.php:32
+msgid "Header Background Color"
+msgstr "Couleur de fond d'en-tête"
+
+#: inc/customizer.php:33
+msgid "Applied to header background."
+msgstr "Appliqué au fond d'en-tête"
+
+#: image.php:101
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Les commentaires et les rétroliens sont fermés."
+
+#: inc/back-compat.php:28 inc/back-compat.php:37 inc/back-compat.php:49
+msgid "Nisarg requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again."
+msgstr "Nisarg requiert la version 4.2 ou supérieure de WordPress. Vous utilisez la version %s. Veuillez mettre WordPress à jour et réessayer."
+
+#: inc/custom-header.php:35 inc/custom-header.php:50
+msgctxt "header image description"
+msgid "food"
+msgstr "nourriture"
+
+#: inc/custom-header.php:40
+msgctxt "header image description"
+msgid "buildings"
+msgstr "bâtiments"
+
+#: inc/custom-header.php:45
+msgctxt "header image description"
+msgid "Wood"
+msgstr "forêt"
+
+#: image.php:99
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Les rétroliens sont fermés, mais vous pouvez <a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire\">poster un commentaire</a>."
+
+#: image.php:97
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Commentaires clos, mais vous pouvez laisser un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback\">URL de Trackback</a>."
+
+#: image.php:95
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire\">Poster un commentaire</a> ou faire un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback\">URL de Trackback</a>."
+
+#: image.php:89 template-parts/content-aside.php:28
+#: template-parts/content-gallery.php:33 template-parts/content-link.php:32
+#: template-parts/content-page.php:26 template-parts/content-quote.php:34
+#: template-parts/content-status.php:23 template-parts/content.php:54
+msgid "Pages:"
+msgstr "Pages:"
+
+#: image.php:42
+msgid "Next &rarr;"
+msgstr "Suivant &rarr;"
+
+#: image.php:41
+msgid "&larr; Previous"
+msgstr "&larr; Précédent"
+
+#: image.php:27
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "Publié le <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time></span> à <a href=\"%3$s\" title=\"Lien vers l'image pleine taille\">%4$s &times; %5$s</a> dans <a href=\"%6$s\" title=\"Revenir à %7$s\" rel=\"gallery\">%7$s</a>"
+
+#: image.php:37 image.php:103 template-parts/content-page.php:33
+msgid "Edit"
+msgstr "&Eacute;diter"
+
+#: functions.php:202
+msgid " Read More"
+msgstr "Lire la suite"
+
+#: functions.php:122
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:58
+msgid "Top Primary Menu"
+msgstr "Menu principal du haut"
+
+#: footer.php:24
+msgid "Theme: %1$s by %2$s."
+msgstr "Thème %1$s par %2$s"
+
+#: footer.php:19
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: footer.php:18
+msgid "Proudly Powered by "
+msgstr "Fièrement propulsé par"
+
+#: comments.php:63 single.php:32
+msgid "Comments are closed."
+msgstr "Les commentaires sont clos."
+
+#: comments.php:54
+msgid "Newer Comments"
+msgstr "Commentaires plus récents"
+
+#: comments.php:50
+msgid "Older Comments"
+msgstr "Commentaires plus anciens"
+
+#: comments.php:47
+msgid "Comment navigation"
+msgstr "Navigation de commentaire"
+
+#: comments.php:27
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Une réaction au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
+msgstr[1] "%1$s réactions au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
+
+#: archive.php:19
+msgid "Browsed by"
+msgstr "Archives de"
+
+#: 404.php:20
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Contenu Introuvable. L'outil de Recherche ou les Liens ci-dessous vous remettront peut-être sur la voie&hellip;"
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oups, la page ne peut être trouvée"
+
+#. Theme URI of the plugin/theme
+msgid "http://falgunidesai.com/work/nisarg-a-wordpress-theme/"
+msgstr "http://falgunidesai.com/work/nisarg-a-wordpress-theme/"
+
+#. Author of the plugin/theme
+msgid "Falguni Desai"
+msgstr "Falguni Desai"
+
+#. Author URI of the plugin/theme
+msgid "http://falgunidesai.com/"
+msgstr "http://falgunidesai.com/"

@@ -1,0 +1,114 @@
+//main: ../theme.less
+/* Form Input Styling
+------------------------------------------------------------------------------*/
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+textarea {
+	border-radius  : @border-radius;
+	box-shadow     : none;
+	padding        : 0 20px;
+	color          : @text-color;
+	min-width      : 230px;
+	vertical-align : middle;
+	display        : inline-block;
+	min-height     : 46px;
+	border         : 1px solid @border-color;
+	width          : 100%;
+	.transition(.2s);
+	font-size      : 16px;
+	&:focus {
+		outline : none;
+		border  : 1px solid @brand-secondary !important;
+	}
+	@media (max-width : @screen-xs-max) {
+		margin-bottom : 10px;
+	}
+}
+
+textarea {
+	min-height     : 150px;
+	padding-top    : 6px;
+	padding-bottom : 6px;
+	resize         : none;
+}
+
+select {
+	border-radius : @border-radius;
+	box-shadow    : none;
+	height        : 38px;
+}
+
+input[type=submit],
+button,
+input[type=button] {
+	text-transform : capitalize;
+	border         : 0;
+}
+
+.input-group .form-control {
+	z-index : 0;
+}
+
+.form-group {
+	margin-bottom : 10px;
+}
+
+.tpl-input-group input {
+	margin : 0;
+}
+
+.tpl-input-group .tpl-input-button {
+	width     : 46px;
+	height    : 46px;
+	color     : @text-color;
+	font      : icon;
+	font-size : 16px;
+}
+
+.tpl-form-group .input-group {
+	margin : 15px 0;
+}
+
+.tpl-form-group .input-group input,
+.tpl-form-group .input-group textarea {
+	border-top-right-radius    : 0;
+	border-bottom-right-radius : 0;
+}
+
+.form-control:focus {
+	box-shadow : none;
+}
+
+.tpl-newsletter-form {
+	input[type="email"] {
+		font-family   : @font-family-subtitle;
+		font-style    : italic;
+		font-size     : 15px;
+		padding       : 5px 20px;
+		min-height    : 50px;
+		border-radius : 50px;
+	}
+	.tpl-button {
+		background-color : @brand-secondary;
+		border           : none;
+		min-height       : 50px;
+		color            : darken(@brand-secondary, 30%);
+		font-size        : 13px;
+		font-weight      : 700;
+		text-transform   : uppercase;
+		padding          : 14px 32px;
+	}
+}
+
+.wrap-forms .field-text label,
+.wrap-forms .field-textarea label {
+	display : none;
+}
+
+input[type="submit"] {
+	.tpl-button;
+}

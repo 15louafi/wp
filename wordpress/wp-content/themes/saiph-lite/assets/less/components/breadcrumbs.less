@@ -1,0 +1,61 @@
+//main: ../theme.less
+/* Breadcrumbs
+------------------------------------------------------------------------------*/
+.tpl-breadcrumbs {
+	background-color : @gray;
+	padding          : 40px 0;
+	font-weight      : 700;
+	color            : fade(@text-color, 50%);
+	overflow         : hidden;
+	.tpl-breadcrumbs-list {
+		list-style     : none;
+		display        : inline-block;
+		margin         : 0;
+		padding        : 0;
+		vertical-align : -7px;
+		li {
+			display     : inline-block;
+			margin-left : 20px;
+			&:before {
+				font-family  : 'FontAwesome';
+				content      : '\f0da';
+				color        : @brand-primary;
+				margin-right : 5px;
+			}
+			&:first-of-type {
+				margin-left : 10px;
+				&:before {
+					content : '';
+				}
+			}
+			&:last-of-type {
+				color : @brand-primary;
+			}
+			a {
+				&:hover {
+					color : @brand-primary;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width : @screen-sm) {
+	.tpl-breadcrumbs-list {
+		li {
+			margin-left : 10px;
+			display     : none;
+			&:first-of-type {
+				display : inline-block;
+			}
+			&:last-of-type {
+				display       : inline-block;
+				float         : left;
+				text-overflow : ellipsis;
+				overflow      : hidden;
+				width         : 60%;
+				white-space   : nowrap;
+			}
+		}
+	}
+}

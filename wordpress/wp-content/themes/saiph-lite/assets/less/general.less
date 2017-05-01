@@ -1,0 +1,218 @@
+//main: theme.less
+//
+// Body
+// -----------------------------------------------------------------------------
+
+body {
+	background-color       : @body-bg;
+	color                  : @text-color;
+	font-family            : @font-family-content;
+	font-size              : @font-size-base;
+	letter-spacing         : @content-letter-spacing;
+	-webkit-font-smoothing : antialiased;
+	line-height            : @line-height-base;
+	overflow-x             : hidden;
+}
+
+hr {
+	border-color : @border-color;
+}
+
+a {
+	color : @text-color;
+	&:hover {
+		color : @brand-primary;
+	}
+	&:active, &:focus {
+		color : lighten(@brand-primary, 25%);
+	}
+}
+
+h1 {
+	font-size : @font-size-h1
+}
+
+h2 {
+	font-size : @font-size-h2
+}
+
+h3 {
+	font-size : @font-size-h3
+}
+
+h4 {
+	font-size : @font-size-h4
+}
+
+h5 {
+	font-size : @font-size-h5
+}
+
+h6 {
+	font-size : @font-size-h6
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family    : @font-family-titles;
+	line-height    : @headings-line-height;
+	letter-spacing : @headings-letter-spacing;
+	font-weight    : @headings-font-weight;
+	color          : @headings-color;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+a:hover,
+a:active,
+a:focus {
+	text-decoration : none;
+	outline         : 0;
+
+}
+
+a {
+	color : @text-color;
+  	&.tpl-permalink{
+	  display:block;
+	}
+}
+
+a:hover {
+	color : @brand-secondary;
+	.transition(all, .2s);
+}
+
+p {
+	color     : @text-color;
+	font-size : @font-size-base;
+}
+
+q {
+	&:before, &:after {
+		color     : @brand-primary;
+		font-size : 20px;
+	}
+}
+
+img,
+iframe,
+embed {
+  max-width: 100%;
+}
+
+strong {
+	text-transform : uppercase;
+}
+
+::-moz-selection {
+	background  : @brand-primary;
+	color       : #fff;
+	text-shadow : none;
+}
+
+::selection {
+	background  : @brand-primary;
+	color       : #fff;
+	text-shadow : none;
+}
+
+/* Tooltip
+------------------------------------------------------------------------------*/
+
+.tooltip {
+	& .tooltip-inner {
+		min-width        : 190px;
+		background-color : @brand-secondary;
+		padding          : 20px 25px;
+		color            : darken(@brand-secondary, 45%);
+		font-family      : @font-family-titles, sans-serif;
+		font-size        : 13px;
+		& > span {
+			color : darken(@brand-secondary, 25%);
+		}
+	}
+	&.top .tooltip-arrow {
+		border-top-color : @brand-secondary;
+	}
+}
+
+/* Icons
+------------------------------------------------------------------------------*/
+
+p.tpl-circle-stacked-icons {
+	cursor : pointer
+}
+
+.tpl-circle-stacked-icons .fa-circle {
+	color : @brand-secondary;
+	.transition-duration(.2s);
+}
+
+.tpl-circle-stacked-icons .fa-stack i:nth-child(2) {
+	color : white
+}
+
+.tpl-circle-stacked-icons .fa-stack:hover > .fa-circle {
+	color : @brand-primary;
+	.transition-duration(.2s);
+}
+
+/* Google Map
+------------------------------------------------------------------------------*/
+
+#googleMap {
+	height : 500px;
+	width  : 100%;
+}
+
+/* Preloader
+------------------------------------------------------------------------------*/
+
+.animsition-loading:after {
+	font-family : @font-family-titles;
+	font-size   : 16px;
+	font-weight : 600;
+}
+
+/* Extra Bootstrap Styles
+------------------------------------------------------------------------------*/
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+	position      : relative;
+	min-height    : 1px;
+	padding-right : 10px;
+	padding-left  : 10px;
+}
+
+.col-xs-5ths {
+	width : 20%;
+	float : left;
+}
+
+@media (min-width : 768px) {
+	.col-sm-5ths {
+		width : 20%;
+		float : left;
+	}
+}
+
+@media (min-width : 992px) {
+	.col-md-5ths {
+		width : 20%;
+		float : left;
+	}
+}
+
+@media (min-width : 1200px) {
+	.col-lg-5ths {
+		width : 20%;
+		float : left;
+	}
+}

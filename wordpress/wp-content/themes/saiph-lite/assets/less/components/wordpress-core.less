@@ -1,0 +1,355 @@
+//main: ../theme.less
+/* WordPress Specific
+------------------------------------------------------------------------------*/
+.gallery-caption {
+	position : static;
+}
+
+.bypostauthor {
+	position : static;
+}
+
+.author-description {
+	p {
+		font-family : 'Mallana', sans-serif;
+		font-size   : 15px;
+		color       : fade(@text-color, 75%);
+	}
+	h5 {
+		text-transform : uppercase;
+	}
+	.tpl-avatar {
+		img {
+			border-radius : 50%;
+		}
+	}
+}
+
+.tpl-blog-post-body {
+	.tpl-pager {
+		li {
+			background-color : @brand-secondary;
+		}
+		a li {
+			background-color : #fff;
+			&:hover {
+				background-color : @brand-secondary;
+			}
+		}
+	}
+}
+
+.single-post {
+	.author-description {
+		border-top   : 1px solid @border-color;
+		padding-top  : 30px;
+		margin-right : 0;
+		margin-left  : 0;
+	}
+}
+
+.tpl-blog-post-body.aside-no-image {
+	padding-top : 70px;
+}
+
+.tpl-blog-box.format-quote {
+	@shadow: inset 10px 10px 0 -4px fade(@brand-primary, 80%),inset -10px -10px 0 -4px fade(@brand-secondary, 80%);
+	.box-shadow(@shadow);
+}
+
+.format-image .entry-content p {
+	overflow : hidden;
+}
+
+.embed-container {
+	padding        : 0;
+	position       : relative;
+	padding-bottom : 56.25%;
+	height         : 0;
+	overflow       : hidden;
+	max-width      : 100%;
+	margin-bottom  : 30px;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position : absolute;
+	top      : 0;
+	width    : 100%;
+	height   : 100%;
+	left     : 50%;
+	.translate(-50%, 0);
+}
+
+.read-more-button {
+	padding        : 10px 20px;
+	color          : darken(@brand-secondary, 42%);
+	text-transform : uppercase;
+	font-family    : @font-family-titles;
+	font-size      : 10px;
+	font-weight    : 800;
+	background     : @brand-secondary;
+	display        : inline-block;
+	border-radius  : @border-radius;
+	.transition-duration(0.2s);
+	&:hover {
+		color : #fff;
+		.transition-duration(.2s);
+	}
+}
+
+.saiph_error {
+	font-size        : 80px;
+	font-family      : @font-family-titles;
+	font-weight      : 800;
+	background-color : @brand-primary;
+	color            : #fff;
+	display          : inline-block;
+	border-radius    : @border-radius;
+	padding          : 35px;
+}
+
+.comments-area {
+	.comment {
+		display    : inline-block;
+		margin-top : 30px;
+		width      : 100%;
+	}
+	padding : 0 0 30px;
+	.parent {
+		margin-bottom : 15px;
+	}
+	h2.comments-title,
+	#reply-title {
+		font-size    : 16px;
+		padding-left : 0;
+	}
+	h2.comments-title {
+		padding    : 45px 0 35px;
+		border-top : 1px solid @border-color;
+	}
+	.comment-list,
+	.children {
+		padding-left    : 0;
+		list-style-type : none;
+		padding-bottom  : 15px;
+		.comment-body {
+			margin-bottom : 15px;
+		}
+		.children {
+			padding-top  : 25px;
+			padding-left : 30px;
+			border-left  : 3px solid @brand-secondary;
+			display      : inline-block;
+		}
+	}
+	.reply {
+		text-align : right;
+	}
+	.comment-meta {
+		display        : inline-block;
+		@media (min-width : @screen-sm) {
+			width : 170px;
+		}
+	;
+		float          : left;
+		padding-right  : 30px;
+		vertical-align : top;
+		.comment-author {
+			img {
+				display       : block;
+				margin-bottom : 10px;
+			}
+			span {
+				display : none;
+			}
+		}
+		.comment-metadata time {
+			font-size   : 11px;
+			font-family : inherit;
+			display     : block;
+			color       : @text-color;
+		}
+	}
+	.comment-reply-link {
+		color          : @text-color;
+		border         : 1px solid @border-color;
+		padding        : 10px 15px;
+		display        : inline-block;
+		text-transform : uppercase;
+		font-family    : @font-family-titles;
+		margin         : 0 10px 10px 0;
+		font-size      : 10px;
+		font-weight    : 600;
+		.transition-duration(.2s);
+		&:hover {
+			color : @brand-secondary;
+			.transition-duration(.2s);
+		}
+	}
+}
+
+.comment-respond {
+	border-top : 1px solid @border-color;
+}
+
+.comment-form {
+	label {
+		text-transform : uppercase;
+		font-size      : 12px;
+		display        : block;
+		margin-bottom  : 10px;
+	}
+}
+
+.comment-form-comment {
+	display : inline-block;
+	width   : 100%;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	@media (min-width : @screen-sm) {
+		width : 33.3%;
+		float : left;
+	}
+;
+	width         : 100%;
+	padding-right : 15px;
+	input {
+		min-width : 100%;
+	}
+}
+
+@media (min-width : @screen-sm) {
+	.comment-form-url {
+		padding-right : 0;
+	}
+}
+
+;
+.form-allowed-tags {
+	display : none;
+}
+
+.form-submit {
+	#submit {
+		.tpl-button();
+		&:hover {
+			background-color : lighten(@brand-primary, 10%);
+		}
+	}
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+	margin : 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+	display : block;
+	margin  : 5px auto;
+}
+
+.alignright {
+	float    : right;
+	margin   : 5px 0 0px 20px;
+	position : relative;
+	bottom   : 20px;
+}
+
+.alignleft {
+	float  : left;
+	margin : 5px 20px 20px 0;
+}
+
+a img.alignright {
+	float  : right;
+	margin : 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin : 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float  : left;
+	margin : 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display      : block;
+	margin-left  : auto;
+	margin-right : auto;
+}
+
+.wp-caption {
+	background : #fff;
+	border     : 1px solid #f0f0f0;
+	max-width  : 96%;
+	/* Image does not overflow the content area */
+	padding    : 5px 3px 10px;
+	text-align : center;
+}
+
+.wp-caption.alignnone {
+	margin : 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin : 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin : 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border    : 0 none;
+	height    : auto;
+	margin    : 0;
+	max-width : 98.5%;
+	padding   : 0;
+	width     : auto;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size   : 11px;
+	line-height : 17px;
+	margin      : 0;
+	padding     : 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip     : rect(1px, 1px, 1px, 1px);
+	position : absolute !important;
+	height   : 1px;
+	width    : 1px;
+	overflow : hidden;
+}
+
+.screen-reader-text:focus {
+	background-color : #f1f1f1;
+	border-radius    : 3px;
+	box-shadow       : 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip             : auto !important;
+	color            : #21759b;
+	display          : block;
+	font-size        : 14px;
+	font-size        : 0.875rem;
+	font-weight      : bold;
+	height           : auto;
+	left             : 5px;
+	line-height      : normal;
+	padding          : 15px 23px 14px;
+	text-decoration  : none;
+	top              : 5px;
+	width            : auto;
+	z-index          : 100000;
+	/* Above WP toolbar. */
+}

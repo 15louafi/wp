@@ -1,0 +1,143 @@
+//main: ../theme.less
+/* Sections
+------------------------------------------------------------------------------*/
+.section-parallax {
+	min-height            : 350px;
+	max-height            : 570px;
+	float                 : left;
+	width                 : 100%;
+	padding               : 55px 0;
+	background-attachment : fixed;
+	background-origin     : initial;
+	background-clip       : initial;
+	background-size       : cover;
+	background-repeat     : no-repeat;
+	background-position   : 100% 0;
+	background-position   : center;
+	position              : relative;
+	overflow              : hidden;
+	&:before {
+		-webkit-transform : skewX(-45deg);
+		-ms-transform     : skewX(-45deg);
+		transform         : skewX(-45deg);
+		background        : fade(@brand-secondary, 80%);
+		position          : absolute;
+		min-height        : 300px;
+		width             : 62%;
+		bottom            : 0;
+		left              : -15%;
+		top               : 0;
+		content           : '';
+	}
+	&:after {
+		content           : '';
+		-webkit-transform : skewX(-45deg);
+		-ms-transform     : skewX(-45deg);
+		transform         : skewX(-45deg);
+		background        : fade(@brand-secondary, 80%);
+		position          : absolute;
+		min-height        : 300px;
+		width             : 40%;
+		bottom            : 0;
+		right             : -15%;
+		top               : 0;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color : darken(@brand-secondary, 45%);
+	}
+	p {
+		margin-bottom : 15px;
+		color         : darken(@brand-secondary, 39%);
+		&:first-of-type {
+			margin-top : 15px;
+		}
+	}
+	a {
+		.tpl-button;
+	}
+}
+
+section.gray-bg {
+	background-color : #f6f6f6;
+	position         : relative;
+	margin           : 0;
+}
+
+.primary-bg {
+	background-color : @brand-primary;
+	& .tpl-title {
+		& h4 {
+			color : lighten(@brand-primary, 25%);
+		}
+		& h2 {
+			color : #fff;
+		}
+	}
+}
+
+.secondary-bg {
+	background-color : @brand-secondary;
+}
+
+.tpl-fader {
+	margin-top : -70px;
+	z-index    : 1;
+	position   : relative;
+	width      : 100%;
+	height     : 70px;
+	background : -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 1) 100%);
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(44%, rgba(255, 255, 255, 0.8)), color-stop(100%, rgba(255, 255, 255, 1)));
+	background : -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 1) 100%);
+	background : -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 1) 100%);
+	background : -ms-linear-gradient(top, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 1) 100%);
+	background : linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 1) 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccffffff', endColorstr='#ffffff', GradientType=0);
+}
+
+.gradiented-section {
+	background-size : cover;
+	position        : relative;
+	z-index         : 0;
+	.tpl-title {
+		h2,
+		h4 {
+			color : fade(#fff, 80%);
+		}
+	}
+	&.primary {
+		&:before {
+			.gradient(@brand-primary);
+		}
+	}
+	&.secondary {
+		&:before {
+			.gradient(@brand-secondary);
+		}
+	}
+	&:before {
+		content  : '';
+		position : absolute;
+		top      : 0;
+		right    : 0;
+		bottom   : 0;
+		left     : 0;
+		z-index  : -1;
+	}
+	.tpl-price-plan {
+		color : #fff;
+		.tpl-price-plan-body,
+		.tpl-price-plan-header {
+			color : #fff;
+		}
+	}
+}
+
+.section-illustration {
+	-webkit-transform : translate(-70%, -70%);
+	transform         : translate(-70%, -70%);
+}

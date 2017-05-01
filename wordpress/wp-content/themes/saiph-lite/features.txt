@@ -1,0 +1,86 @@
+- Installation (Admin Panel)
+	
+    Log in to the WordPress Administration Panels.
+    Select the Appearance panel, then Themes.
+    Select Add New.
+    Either use the Search or Filter options to locate Saiph Lite.
+    Click on the Preview link to preview the Theme or the Install Now link to upload the Theme to your blog,
+    Or use the Upload link in the top links row to upload a zipped copy of Saiph Lite that you have previously downloaded.
+		
+- Activating (using cPanel)
+
+    Log in to the WordPress Administration Panels.
+    Select the Appearance panel, then Themes.
+    From the Themes panel, roll over the Theme thumbnail image for Saiph Lite and click the Activate button.
+
+- Recommended Plugin
+
+    Theme is built using the Unyson Framework. You can find more information about it here: http://unyson.io/
+    The complete documentation for it can be found here: http://manual.unyson.io/en/latest/
+    Saiph Lite uses the Unyson Framework for the Page Building functionality (drag & drop shortcode functionality)
+		Saiph Lite Plugin , download it from here: http://getsaiph.com/downloads/saiph-lite-plugin.zip - install it and activate it ( The unyson framework page builder will be populated with the saiph shortcodes and a new post type - Saiph Testimonials - will be available );
+		
+-	Shortcode list
+
+    > Layout elements (rows, columns)
+    > Twitter carousel
+    > Gallery shortcode
+    > Blog listing (different layouts)
+    > Title shortcodes (animated, normal)
+    > Buttons
+    > Countdown containers (animated numbers)
+    > Content Boxes (icon box, profile box, contaxt box)
+    > Progress Bars
+    > Accordions
+    > Tabs
+
+- Sliders
+
+	Sliders are very usefull when trying to display a highlight from your site, be it a discount, a new product or even a new blog post. 
+	To create your own slider you will need to go to Dashboard > Appearance > Sliders. 
+	The configuration options available are:
+
+    Type : here you can select what type of slider you will create ( a normal slider - as seen in the demo homepage, or a thumb-circle slider as seen in the About us page)
+    Population method : this option allows you to select the method used for adding the slider content, the only option available is manually uploading the images.
+    Title : set the title of your slider, this is only used for internal purposes like differentiating between your available sliders.
+		
+		Normal Slider  Additional Options:
+			Project Name : Choose a name of your project for the circle.
+			Project Category : Choose a category of your project for the circle.
+
+- Menu
+
+    Theme has 2 available menu locations (TOP AND FOOTER MENU). Footer Menu does not provide support for child elements and the Top menu supports only 1 direct child ( sub-sub-menu items are not supported )
+
+- Built in Widgets
+
+    Saiph Social Widgets - add your own custom links, it will generate a list of font awesome icons that link directly to your profile
+    Saiph Blog Tabs - provides a listing of Recent / Most Commented blog posts
+
+- Blog posts extra functionality
+
+    > If the user has user bio, after the blog body, a container will be created with the gravatar + info
+    > If the blog uses tags, it will create a container with Related Posts, right after the blog post body.
+    > Although you can use the standard wordpress blog listing, I encourage creating a New Page and use the Blog shortcode for increased functionality
+    > Post Formats
+        - Standard
+        - Aside
+        - Video
+        - Quote
+        - Link
+        - Gallery
+    > The featured image will be used across the website as "header image", if no featured image is provided, the image set in Customizer will be displayed.
+
+- Widget Areas
+
+    Available widget positions
+        > Sidebar Right
+        Footer Area
+            > Footer A ( Column )
+            > Footer B ( Column )
+            > Footer C ( Column )
+            > Footer D ( Column )
+
+        Note that the footer columns will resize depending on the widgets used. For example, if you use Footer A, and Footer B columns, the footer will be split in 2 equal parts (columns will always have the exact size)
+
+- Featured images are used as header images on pages where they are appointed. This is used in order to keep the overall design style of the template. If no feature image is configured, the image set in customizer will be used (Featured image has a higher priority).

@@ -1,0 +1,356 @@
+//main: ../theme.less
+/* Offcanvas Menu
+------------------------------------------------------------------------------*/
+.offcanvas-menu-container {
+	width            : 250px;
+	height           : 100%;
+	position         : fixed;
+	top              : 0;
+	left             : -205px;
+	z-index          : 100;
+	background-color : @body-bg;
+	border-right     : 1px solid fade(@brand-primary, 30%);
+	@transition: cubic-bezier(.18, .41, .19, .88);
+	.transition(.3s, @transition);
+	&.opened {
+		left : 0;
+		.transition(.3s, @transition);
+		.offcanvas-menu {
+			li {
+				a {
+					.fa {
+						right : auto;
+						left  : 10px;
+					}
+				}
+			}
+		}
+	}
+	.offcanvas-header {
+		padding       : 0 20px;
+		height        : 70px;
+		display       : block;
+		border-bottom : 1px solid fade(@brand-primary, 30%);
+		position      : relative;
+		.offcanvas-logo {
+			overflow      : hidden;
+			text-overflow : ellipsis;
+			max-width     : 200px;
+			white-space   : nowrap;
+			h3 {
+				font-size : 24px;
+				max-width : 170px;
+				width     : 170px;
+				overflow  : hidden;
+			}
+		}
+		.tpl-logo {
+			max-width : 100px;
+		}
+		.offcanvas-toggler {
+			position         : absolute;
+			right            : 0;
+			top              : 12px;
+			background-color : transparent;
+			width            : 45px;
+			height           : 45px;
+			.tcon-menu__lines {
+				height           : 3px;
+				background-color : @text-color;
+				&:before,
+				&:after {
+					background-color : @text-color;
+					height           : 3px;
+				}
+			}
+			&:hover {
+				.tcon-menu__lines {
+					background-color : @brand-secondary;
+					&:before,
+					&:after {
+						background-color : @brand-secondary;
+					}
+				}
+			}
+		}
+		a {
+			margin      : 0;
+			padding     : 0;
+			line-height : 70px;
+			&:hover > h3 {
+				color : @brand-secondary;
+				.transition(.2s);
+			}
+			h3 {
+				margin         : 0;
+				padding        : 0;
+				text-transform : uppercase;
+				line-height    : 70px;
+				.transition(.2s);
+			}
+		}
+	}
+	.offcanvas-menu {
+		list-style : none;
+		margin     : 0;
+		padding    : 0;
+		li {
+			position : relative;
+			display  : block;
+			> .sub-menu {
+				display : none;
+				margin  : 0;
+				padding : 0;
+				> li > a {
+					padding-left : 45px;
+				}
+			}
+			> .mega-menu {
+				display : none;
+				> .sub-menu {
+					margin  : 0;
+					padding : 0;
+					> li > a {
+						padding-left : 45px;
+					}
+				}
+				.mega-menu-col {
+					> div {
+						display : none;
+					}
+				}
+			}
+			a {
+				display       : block;
+				padding       : 15px 35px;
+				font-size     : 13px;
+				font-family   : @font-family-titles;
+				font-weight   : 600;
+				.transition(.2s);
+				border-bottom : 1px solid fade(@brand-primary, 30%);
+				&:before {
+					font-family  : 'FontAwesome';
+					margin-right : 10px;
+				}
+				.fa {
+					position  : absolute;
+					display   : block;
+					font-size : 23px;
+					right     : 12px;
+					top       : 10px;
+				}
+			}
+			.submenu-button {
+				border-color : transparent;
+				.tcon-menu__lines,
+				.tcon-menu__lines:before,
+				.tcon-menu__lines:after {
+					background-color : fade(@brand-primary, 30%);
+				}
+				&:hover {
+					.tcon-menu__lines,
+					.tcon-menu__lines:before,
+					.tcon-menu__lines:after {
+						background-color : @brand-secondary;
+					}
+				}
+			}
+			&.current-menu-item {
+				a {
+					color : @brand-primary;
+				}
+			}
+		}
+	}
+
+	// Color schemes
+	&.primary {
+		.gradient(@brand-primary);
+		border-color : lighten(@brand-secondary, 8%);
+		.offcanvas-header {
+			border-color : lighten(@brand-secondary, 8%);
+			a {
+				&:hover > h3 {
+					color : @brand-secondary;
+				}
+				h3 {
+					color : #fff;
+				}
+			}
+			.offcanvas-toggler {
+				.tcon-menu__lines {
+					background-color : @brand-secondary;
+					&:before,
+					&:after {
+						background-color : @brand-secondary;
+					}
+				}
+				&:hover {
+					.tcon-menu__lines {
+						background-color : #fff;
+						&:before,
+						&:after {
+							background-color : #fff;
+						}
+					}
+				}
+			}
+		}
+		.offcanvas-menu {
+			li {
+				a {
+					color         : #fff;
+					border-bottom : 1px solid lighten(@brand-secondary, 8%);
+					&:hover {
+						color : @brand-secondary;
+					}
+				}
+				.submenu-button {
+					border-color : transparent;
+					.tcon-menu__lines,
+					.tcon-menu__lines:before,
+					.tcon-menu__lines:after {
+						background-color : lighten(@brand-secondary, 8%);
+					}
+					&:hover {
+						.tcon-menu__lines,
+						.tcon-menu__lines:before,
+						.tcon-menu__lines:after {
+							background-color : #fff;
+						}
+					}
+				}
+				&.current-menu-item {
+					a {
+						color : @brand-secondary;
+					}
+				}
+			}
+		}
+	}
+	&.secondary {
+		.gradient(@brand-secondary);
+		border-color : fade(@brand-primary, 30%);
+		.offcanvas-header {
+			border-color : fade(@brand-primary, 30%);
+			a {
+				&:hover > h3 {
+					color : @brand-primary;
+				}
+				h3 {
+					color : #fff;
+				}
+			}
+			.offcanvas-toggler {
+				.tcon-menu__lines {
+					background-color : #fff;
+					&:before,
+					&:after {
+						background-color : #fff;
+					}
+				}
+				&:hover {
+					.tcon-menu__lines {
+						background-color : @brand-primary;
+						&:before,
+						&:after {
+							background-color : @brand-primary;
+						}
+					}
+				}
+			}
+		}
+		.offcanvas-menu {
+			li {
+				a {
+					color        : #fff;
+					border-color : fade(@brand-primary, 30%);
+					&:hover {
+						color : @brand-primary;
+					}
+				}
+				.submenu-button {
+					border-color : transparent;
+					.tcon-menu__lines,
+					.tcon-menu__lines:before,
+					.tcon-menu__lines:after {
+						background-color : #fff;
+					}
+					&:hover {
+						.tcon-menu__lines,
+						.tcon-menu__lines:before,
+						.tcon-menu__lines:after {
+							background-color : @brand-primary;
+						}
+					}
+				}
+				&.current-menu-item {
+					a {
+						color : @brand-primary;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width : @screen-md) {
+		left : -250px;
+		.offcanvas-header {
+			.offcanvas-toggler {
+				right            : -50px;
+				background-color : #f6f6f6;
+			}
+		}
+
+		&.primary {
+			.offcanvas-header {
+				.offcanvas-toggler {
+					.gradient(@brand-primary);
+				}
+			}
+		}
+
+		&.secondary {
+			.offcanvas-header {
+				.offcanvas-toggler {
+					.gradient(@brand-secondary);
+				}
+			}
+		}
+	}
+}
+
+.offcanvas-menu-container {
+	&.opened {
+		.submenu-button {
+			display : block;
+		}
+	}
+	.submenu-button {
+		position       : absolute;
+		z-index        : 10;
+		right          : 0;
+		top            : 0;
+		padding-bottom : 5px;
+		display        : none;
+		border         : none;
+		height         : 48px;
+		width          : 48px;
+		cursor         : pointer;
+		border-left    : 1px solid fade(@brand-primary, 30%);
+		&.opened {
+			border-color : transparent;
+		}
+		.tcon-menu__lines {
+			height : 3px;
+			width  : 25px;
+			&:after {
+				height : 3px;
+				top    : -7px;
+			}
+			&:before {
+				height : 3px;
+				top    : 7px;
+			}
+		}
+	}
+}

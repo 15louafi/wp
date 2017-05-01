@@ -1,0 +1,118 @@
+//main: ../theme.less
+//
+// Buttons
+// -----------------------------------------------------------------------------
+// Mother mixin
+.btnic () {
+	display         : -moz-inline-stack;
+	display         : inline-block;
+	vertical-align  : middle;
+	zoom            : 1;
+	cursor          : pointer;
+	text-decoration : none;
+	font-size       : 13px;
+	padding         : 15px 30px;
+	color           : #fff;
+	border-radius   : @button-border-radius;
+	font-family     : @font-family-titles;
+	outline         : none;
+	&.btnic-block {
+		display : block;
+	}
+	&::-moz-focus-inner {
+		border : none;
+	}
+	&.disabled {
+		cursor     : default;
+		box-shadow : none;
+		&:active {
+			box-shadow : none;
+		}
+	}
+}
+
+// btnic mixins
+.btnic-sizer () {
+	&.huge {
+		font-size : 50px;
+		padding   : 40px 70px;
+	}
+	&.big {
+		font-size : 20px;
+		padding   : 20px 35px;
+	}
+	&.small {
+		font-size : 12px;
+		padding   : 5px 15px;
+	}
+	&.tiny {
+		font-size : 8px;
+		padding   : 2px 10px;
+	}
+}
+
+.btnic-rounder () {
+	&.big-radius {
+		border-radius : 25px;
+	}
+	&.subtle-radius {
+		border-radius : 3px;
+	}
+	&.no-radius {
+		border-radius : 0;
+	}
+}
+
+.btnic-colours () {
+	.btnic-colourGetter(@brand-primary);
+	&:hover {
+		background-color : (lighten(@brand-primary, 5%));
+	}
+	&.secondary {
+		.btnic-colourGetter(@brand-secondary);
+	}
+	&.danger {
+		.btnic-colourGetter(@brand-danger);
+	}
+	&.gray {
+		.btnic-colourGetter(@gray);
+	}
+	&.success {
+		.btnic-colourGetter(@brand-success);
+	}
+	&.warning {
+		.btnic-colourGetter(@brand-warning);
+	}
+}
+
+.btnic-colourGetter(@bg) {
+	background-color : @bg;
+	border           : none;
+	&:focus,
+	&:hover {
+		background-color : hardlight(@bg, #959595);
+	}
+	&.pressed,
+	&:active {
+		background-color : hardlight(@bg, #777);
+	}
+	&.disabled {
+		background : hardlight(@bg, #aaa);
+	}
+}
+
+.btnic-colourGetter(@bg) {
+	background-color : @bg;
+	border           : none;
+	&:focus,
+	&:hover {
+		background-color : hardlight(@bg, #959595);
+	}
+	&.pressed,
+	&:active {
+		background-color : hardlight(@bg, #777);
+	}
+	&.disabled {
+		background : hardlight(@bg, #aaa);
+	}
+}

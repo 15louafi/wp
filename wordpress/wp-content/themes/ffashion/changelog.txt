@@ -1,0 +1,35 @@
+fFashion 1.0.5, 2016-03-30
+------------------------
+FontAwesome update
+bug fixes
+
+fFashion 1.0.4, 2015-08-29
+------------------------
+add required css class .screen-reader-text 
+delete deprecated js file admin-utilities.js
+update text domain to all language functions with 'ffashion'
+escape home_url
+make all text translatable
+use get_template_directory_uri rather than get_stylesheet_directory_uri to make your theme child theme compatible.
+
+fFashion 1.0.3, 2015-07-18
+------------------------
+- change the body font size to 14px
+- change content line height to be 16px
+- added display of homepage content (below the Homepage widget area)
+- slider: change model image to a proper size under mobile resolutions
+- update theme version through comments to 1.0.3
+
+fFashion 1.0.2, 2015-06-14
+------------------------
+- include text domain in style.css comment header 
+- added heading title on the pages
+- fixed CSS validation errors
+
+fFashion 1.0.1, 2015-06-26
+------------------------
+- fix page navigation issue
+
+fFashion 1.0.3, 2015-06-20
+------------------------
+- Initial release

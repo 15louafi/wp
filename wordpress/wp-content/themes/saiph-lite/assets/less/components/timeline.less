@@ -1,0 +1,160 @@
+//main: ../theme.less
+/* Timeline
+------------------------------------------------------------------------------*/
+.tpl-timeline {
+	list-style : none;
+	padding    : 20px 0;
+	position   : relative;
+	&:before {
+		top               : 0;
+		bottom            : 0;
+		position          : absolute;
+		content           : " ";
+		width             : 2px;
+		background-color  : #eee;
+		left              : 50%;
+		-webkit-transform : translateX(-50%);
+		transform         : translateX(-50%);
+	}
+	.tpl-timeline-circle {
+		width            : 60px;
+		height           : 60px;
+		background-color : @brand-secondary;
+		font-family      : @font-family-titles;
+		font-weight      : 700;
+		font-size        : 13px;
+		text-align       : center;
+		margin           : 0 auto;
+		color            : darken(@brand-secondary, 30%);
+		border-radius    : 50%;
+		line-height      : 60px;
+		position         : relative;
+		top              : -40px;
+		&.bottom {
+			top    : auto;
+			bottom : -40px;
+		}
+	}
+	> li {
+		margin-bottom : 0;
+		position      : relative;
+		> .tpl-timeline-panel {
+			width         : 45%;
+			float         : left;
+			border        : 1px solid @border-color;
+			border-radius : @border-radius;
+			position      : relative;
+			& p {
+				padding : 20px;
+			}
+			& .tpl-timeline-heading {
+				padding                 : 12px 25px;
+				background-color        : @brand-primary;
+				border-top-left-radius  : @border-radius;
+				border-top-right-radius : @border-radius;
+				border                  : none;
+				position                : relative;
+				& h4 {
+					color     : #fff;
+					font-size : 16px;
+				}
+				&:before {
+					position          : absolute;
+					top               : 50%;
+					right             : -11px;
+					-webkit-transform : translateY(-50%);
+					transform         : translateY(-50%);
+					display           : inline-block;
+					border-top        : 11px solid transparent;
+					border-left       : 11px solid @brand-primary;
+					border-right      : 0 solid @brand-primary;
+					border-bottom     : 11px solid transparent;
+					content           : " ";
+				}
+			}
+		}
+		&.tpl-timeline-inverted {
+			.tpl-timeline-panel {
+				float : right;
+				.tpl-timeline-heading {
+					&:before {
+						position           : absolute;
+						top                : 50%;
+						left               : -11px;
+						-webkit-transform  : translateY(-50%);
+						transform          : translateY(-50%);
+						display            : inline-block;
+						border-top         : 11px solid transparent;
+						border-left        : 0 solid @brand-primary;
+						border-right       : 11px solid @brand-primary;
+						border-bottom      : 11px solid transparent;
+						border-left-width  : 0;
+						border-right-width : 11px;
+						right              : auto;
+						content            : " ";
+					}
+				}
+			}
+		}
+		&:before,
+		&:after {
+			content : " ";
+			display : table;
+		}
+		&:after {
+			clear : both;
+		}
+	}
+}
+
+.tpl-timeline-badge {
+	width                      : 20px;
+	height                     : 20px;
+	position                   : absolute;
+	top                        : 22px;
+	left                       : 50%;
+	-webkit-transform          : translateX(-50%);
+	transform                  : translateX(-50%);
+	z-index                    : 1;
+	border-top-right-radius    : 50%;
+	border-top-left-radius     : 50%;
+	border-bottom-right-radius : 50%;
+	border-bottom-left-radius  : 50%;
+	border                     : 3px solid @brand-primary;
+}
+
+@media (max-width : 767px) {
+	ul.tpl-timeline:before {
+		left : 40px;
+	}
+
+	ul.tpl-timeline > li > .tpl-timeline-panel {
+		width : calc(100% - 90px);
+		width : -moz-calc(100% - 90px);
+		width : -webkit-calc(100% - 90px);
+	}
+
+	ul.tpl-timeline > li > .tpl-timeline-badge {
+		left        : 15px;
+		margin-left : 0;
+		top         : 16px;
+	}
+
+	ul.tpl-timeline > li > .tpl-timeline-panel {
+		float : right;
+	}
+
+	ul.tpl-timeline > li > .tpl-timeline-panel:before {
+		border-left-width  : 0;
+		border-right-width : 15px;
+		left               : -15px;
+		right              : auto;
+	}
+
+	ul.tpl-timeline > li > .tpl-timeline-panel:after {
+		border-left-width  : 0;
+		border-right-width : 14px;
+		left               : -14px;
+		right              : auto;
+	}
+}

@@ -1,0 +1,145 @@
+//main: ../theme.less
+//
+// Helpers
+// -----------------------------------------------------------------------------
+
+.clearfix() {
+	&:before,
+	&:after {
+		content : " "; // 1
+		display : table; // 2
+	}
+	&:after {
+		clear : both;
+	}
+}
+
+.header(@bg-color, @text-color) {
+	min-height       : 350px;
+	width            : 100%;
+	padding          : 55px 0px 55px 0px;
+	position         : relative;
+	background-color : @bg-color;
+	color            : @text-color;
+}
+
+.box-shadow (@shadow1) {
+	-webkit-box-shadow : @shadow1;
+	-moz-box-shadow    : @shadow1;
+	-ms-box-shadow     : @shadow1;
+	-o-box-shadow      : @shadow1;
+	box-shadow         : @shadow1;
+}
+
+.text-shadow(@h, @v, @blur, @color) {
+	text-shadow : @h @v @blur @color;
+}
+
+.transition-duration(@duration: 0.2s) {
+	-moz-transition-duration    : @duration;
+	-webkit-transition-duration : @duration;
+	-o-transition-duration      : @duration;
+	transition-duration         : @duration;
+}
+
+.opacity(@opacity: 0.5) {
+	-moz-opacity    : @opacity;
+	-khtml-opacity  : @opacity;
+	-webkit-opacity : @opacity;
+	opacity         : @opacity;
+	@opperc: @opacity * 100;
+	-ms-filter      : ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+	filter          : ~"alpha(opacity=@{opperc})";
+}
+
+.transition(@duration:0.2s, @ease:ease-out) {
+	-webkit-transition : all @duration @ease;
+	-moz-transition    : all @duration @ease;
+	-o-transition      : all @duration @ease;
+	transition         : all @duration @ease;
+}
+
+.transform(...) {
+	-webkit-transform : @arguments;
+	-moz-transform    : @arguments;
+	-o-transform      : @arguments;
+	-ms-transform     : @arguments;
+	transform         : @arguments;
+}
+
+.rotation(@deg:5deg) {
+	.transform(rotate(@deg));
+}
+
+.scale(@ratio:1.5) {
+	.transform(scale(@ratio));
+}
+
+.translate(@x:0, @y:0) {
+	.transform(translate(@x, @y));
+}
+
+/* test gradient */
+.gradient(@color:@brand-primary) {
+	background : @color;
+	background : -moz-linear-gradient(left,
+	fade(@color, 80%) 0%,
+	@color 70%,
+	@color 100%);
+	background : -webkit-gradient(linear,
+	left top, right top,
+	color-stop(0%, fade(@color, 80%)),
+	color-stop(70%,@color),
+	color-stop(100%,@color));
+	background : -webkit-linear-gradient(left,
+	fade(@color, 80%) 0%,
+	@color 70%,
+	@color 100%);
+	background : -o-linear-gradient(left,
+	fade(@color, 80%) 0%,
+	@color 70%,
+	@color 100%);
+	background : -ms-linear-gradient(left,
+	fade(@color, 80%) 0%,
+	@color 70%,
+	@color 100%);
+	background : linear-gradient(to right,
+	fade(@color, 80%) 0%,
+	@color 70%,
+	@color 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr=@color, endColorstr=fade(@color, 80%), GradientType=1);
+}
+
+.gradient-footer(@color, @intermediatecolor, @endcolor) {
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, @color), color-stop(31%, @intermediatecolor), color-stop(67%, @endcolor), color-stop(100%, @endcolor));
+	background : -webkit-linear-gradient(top,  @color 0%, @intermediatecolor 31%, @endcolor 67%, @endcolor 100%);
+	background : -webkit-linear-gradient(top, @color 0%, @intermediatecolor 31%, @endcolor 67%, @endcolor 100%);
+	background : linear-gradient(to bottom,  @color 0%, @intermediatecolor 31%, @endcolor 67%, @endcolor 100%);
+	filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr=@color, endColorstr=@endcolor, GradientType=0);
+}
+
+.radial-out(@color: @brand-secondary) {
+	-webkit-backface-visibility : hidden;
+	backface-visibility         : hidden;
+	-moz-osx-font-smoothing     : grayscale;
+	box-shadow                  : 0 0 1px rgba(0, 0, 0, 0);
+	position                    : relative;
+	overflow                    : hidden;
+	display                     : inline-block;
+	vertical-align              : middle;
+	.transition(color, .2s);
+	&:before {
+		z-index          : -1;
+		content          : "";
+		position         : absolute;
+		width            : 100%;
+		top              : 0;
+		left             : 0;
+		right            : 0;
+		bottom           : 0;
+		.scale(0);
+		border-radius    : 25px;
+		.transition(transform, .4s, ease-out);
+		background-color : @color;
+	}
+}
